@@ -10,8 +10,10 @@ class ArticlesController < ApplicationController
     end
     
     def create
+        # debugger
         # render plain: article_params
         @article = Article.new(article_params)
+        @article.user = User.first
         if @article.save
             #do something
             flash[:success] = "Article was created!"
