@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # post 'users', to: 'users#create' #first way
   resources :users, except: [:new] #second way
   resources :articles
+
+  get 'login', to: 'sessions#new'
 end
