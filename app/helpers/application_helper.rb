@@ -5,4 +5,8 @@ module ApplicationHelper
         gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
         image_tag(gravatar_url, class: "img-circle")
     end
+
+    def checklength(val)
+        return val.length > 0
+    end
 end
